@@ -18,4 +18,9 @@ mkdir -p ./build/assets
 
 echo "$topContent" > ./build/top.html
 echo "$bottomContent" > ./build/bottom.html
+
 cp -a "$assetDir/." ./build/assets/
+
+mainJsScript="./build/assets/scripts/main.js"
+mainJsScriptContent="$(<"$mainJsScript")"
+echo "${mainJsScriptContent//\"$assetDir\//"\"$remotePath/assets/"}" > "$mainJsScript"
