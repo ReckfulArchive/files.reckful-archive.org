@@ -44,7 +44,11 @@ jQuery(function () {
     $("pre").prepend('<div class="header">Name                                                   Time                 Size</div>');
 
     // Establish supported formats.
-    const formats = ["jpg", "jpeg", "gif", "png", "html", "css", "csv", "zip", "7z", "doc", "docx", "xls", "xlsx", "txt", "js", "torrent", "sql", "avi", "mp4", "gzip", "json", "webm", "webp", "description"];
+    const formats = [
+        "jpg", "jpeg", "gif", "png", "html", "css", "csv", "zip", "7z",
+        "doc", "docx", "xls", "xlsx", "txt", "js", "torrent", "sql", "avi",
+        "mp4", "gzip", "json", "webm", "webp", "description", "mkv"
+    ];
 
     // Run when text is entered in the search box.
     $('#custom-search-form').on('input', function (e) {
