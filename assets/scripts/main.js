@@ -87,50 +87,61 @@ jQuery(function () {
         filter('');
     });
 
+
     // Scan all files in the directory, check the extensions and show the right MIME-type image.
     preLink.each(function () {
         let oldText;
         let found = 0;
-        const arraySplit = $(this).attr('href').split(".");
+        let $this = $(this);
+        let $href = $this.attr('href');
+        const arraySplit = $href.split(".");
         const fileExt = arraySplit[arraySplit.length - 1];
+
+        const tooltipText = decodeURI($href)
 
         for (let i = 0; i < formats.length; i++) {
             if (fileExt.toLowerCase() === formats[i].toLowerCase()) {
                 found = 1;
-                oldText = $(this).text();
-                $(this).html('<img class="icons" src="assets/images/icons/' + formats[i] + '.png"></a>' + oldText);
+                oldText = $this.text();
+                $this
+                    .attr("data-toggle", "tooltip")
+                    .attr("id", "top")
+                    .attr("title", tooltipText)
+                    .html('<img class="icons" src="assets/images/icons/' + formats[i] + '.png"></a>' + oldText);
                 return;
             }
         }
 
         // Add an icon for the go-back link.
-        if ($(this).text().indexOf("Parent Directory") >= 0) {
+        if ($this.text().indexOf("Parent Directory") >= 0) {
             found = 1;
-            oldText = $(this).text();
-            $(this).html('<img class="icons" src="assets/images/icons/home.png">' + oldText);
+            oldText = $this.text();
+            $this.html('<img class="icons" src="assets/images/icons/home.png">' + oldText);
             return;
         }
 
 
         // Check for folders as they don't have extensions.
-        if ($(this).attr('href').substring($(this).attr('href').length - 1) === '/') {
+        if ($href.substring($href.length - 1) === '/') {
             found = 1;
-            oldText = $(this).text();
-            $(this).html('<img class="icons" src="assets/images/icons/folder.png">' + oldText.substring(0, oldText.length - 1));
+            oldText = $this.text();
+            $this.html('<img class="icons" src="assets/images/icons/folder.png">' + oldText.substring(0, oldText.length - 1));
 
             // Fix for annoying jQuery behaviour where inserted spaces are treated as new elements -- which breaks my search.
-            const string = ' ' + $($(this)[0].nextSibling).text();
+            const string = ' ' + $($this[0].nextSibling).text();
 
             // Copy the original meta-data string, append a space char and save it over the old string.
-            $($(this)[0].nextSibling).remove();
-            $(this).after(string);
+            $($this[0].nextSibling).remove();
+            $this.after(string);
             return;
         }
 
         // File format is not supported by Better Listings, so let's load a generic icon.
         if (found === 0) {
-            oldText = $(this).text();
-            $(this).html('<img class="icons" src="assets/images/icons/file.png">' + oldText);
+            oldText = $this.text();
+            $this.html('<img class="icons" src="assets/images/icons/file.png">' + oldText);
         }
     });
+
+    $('[data-toggle="tooltip"]').tooltip()
 });
