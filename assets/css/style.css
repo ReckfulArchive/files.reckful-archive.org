@@ -1,45 +1,45 @@
 a {
-	color: #4C4C4C;
+    color: #4C4C4C;
 }
 
 body{
-	color: #4C4C4C;
-	font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    color: #4C4C4C;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 
 pre{
-	font-family: 'Oxygen Mono', monospace;
-	background-color: #FFFFFF;
-	border: 0px solid #ccc;
-	width:  650px;
-	padding:  9.5px 0px 9.5px 0px;
+    font-family: 'Oxygen Mono', monospace;
+    background-color: #FFFFFF;
+    border: 0px solid #ccc;
+    width:  650px;
+    padding:  9.5px 0px 9.5px 0px;
 }
 
 #footer{
-	margin-top: 20px;
+    margin-top: 20px;
 }
 #footer a{
-	color: #686868;
+    color: #686868;
 }
 
 hr{
-	margin-bottom: 0px;
+    margin-bottom: 0px;
 }
 
 h4 {
-	color: #686868;
-	margin-top: 20px;
+    color: #686868;
+    margin-top: 20px;
 }
 
 .header {
-	color: #686868;
-	margin:3px 5px 6px 5px;
+    color: #686868;
+    margin:3px 5px 6px 5px;
 }
 
 .icons {
-	margin: 3px 5px 3px 5px;
-	 height: 4%;
-	 width: 4%;
+    margin: 3px 5px 3px 5px;
+    height: 4%;
+    width: 4%;
 }
 
 .col-centered{
@@ -48,21 +48,21 @@ h4 {
 }
 
 #mainBox{
-	width:666px;
+    width:666px;
 }
 
 .text-center{
-	margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 #custom-search-form{
-	font-size: 15px;
-	margin-top: 7px;
+    font-size: 15px;
+    margin-top: 7px;
 }
 
 #searchIcon{
-	padding: 0px 0px 0px 5px;
-	color: #686868;
+    padding: 0px 0px 0px 5px;
+    color: #686868;
 }
 
 .form-group-sm .form-control + .form-control-feedback, .input-group-sm + .form-control-feedback, .input-sm + .form-control-feedback {
@@ -82,10 +82,10 @@ h4 {
 input.form-control,input.form-control:focus {
 
     box-shadow: none;
-   -webkit-box-shadow: none;
-   -moz-box-shadow: none;
-   -moz-transition: none;
-   -webkit-transition: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -moz-transition: none;
+    -webkit-transition: none;
 }
 
 #searchclear {
