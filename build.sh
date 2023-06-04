@@ -6,7 +6,7 @@ remotePath="$3"
 
 pageContent="$(<"$pageFile")"
 
-pageContent="${pageContent//\"$assetDir\//"$remotePath/assets/"}"
+pageContent="${pageContent//\"$assetDir\//"\"$remotePath/assets/"}"
 
 listingStartTag="<!-- NGINX_LISTING_START -->"
 listingEndTag="<!-- NGINX_LISTING_END -->"
