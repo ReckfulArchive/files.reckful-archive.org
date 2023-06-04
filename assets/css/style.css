@@ -98,3 +98,7 @@ input.form-control,input.form-control:focus {
     cursor: pointer;
     color: #AAA;
 }
+
+.tooltip-inner {
+    max-width: 350px;
+}
