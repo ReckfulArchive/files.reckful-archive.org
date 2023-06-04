@@ -6,3 +6,4 @@ Icons from the following authors are used:
 * [dimitry-miroliubov](https://www.flaticon.com/authors/dimitry-miroliubov)
 * [pixel-perfect](https://www.flaticon.com/authors/pixel-perfect)
 * [iconixar](https://www.flaticon.com/authors/iconixar)
+* [roman-kacerek](https://www.flaticon.com/authors/roman-kacerek)
