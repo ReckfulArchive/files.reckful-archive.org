@@ -11,16 +11,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap Core CSS -->
-    <link href=https://reckfularchive.github.io/files/assets/css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="https://reckfularchive.github.io/files/assets/css/bootstrap-3.3.7.min.css" rel="stylesheet">
 
     <!-- Fonts -->
-    <link href=https://reckfularchive.github.io/files/assets/css/fonts.css" rel="stylesheet">
+    <link href="https://reckfularchive.github.io/files/assets/css/fonts.css" rel="stylesheet">
 
     <!-- Styles -->
-    <link rel="stylesheet" href=https://reckfularchive.github.io/files/assets/css/style.css">
+    <link rel="stylesheet" href="https://reckfularchive.github.io/files/assets/css/style.css">
 
     <!-- jQuery -->
-    <script src=https://reckfularchive.github.io/files/assets/scripts/jquery-1.12.4.min.js"></script>
+    <script src="https://reckfularchive.github.io/files/assets/scripts/jquery-1.12.4.min.js"></script>
 
     <script>
         // Configure BetterListing here:
@@ -116,7 +116,7 @@
                     if (fileExt.toLowerCase() == formats[i].toLowerCase()) {
                         var found = 1;
                         var oldText = $(this).text();
-                        $(this).html('<img class="icons" src=https://reckfularchive.github.io/files/assets/images/icons/' + formats[i] + '.png"></img></a>' + oldText);
+                        $(this).html('<img class="icons" src="https://reckfularchive.github.io/files/assets/images/icons/' + formats[i] + '.png"></img></a>' + oldText);
                         return;
                     }
                 }
@@ -125,7 +125,7 @@
                 if ($(this).text().indexOf("Parent Directory") >= 0) {
                     var found = 1;
                     var oldText = $(this).text();
-                    $(this).html('<img class="icons" src=https://reckfularchive.github.io/files/assets/images/icons/home.png">' + oldText);
+                    $(this).html('<img class="icons" src="https://reckfularchive.github.io/files/assets/images/icons/home.png">' + oldText);
                     return;
                 }
 
@@ -134,7 +134,7 @@
                 if ($(this).attr('href').substr($(this).attr('href').length - 1) == '/') {
                     var found = 1;
                     var oldText = $(this).text();
-                    $(this).html('<img class="icons" src=https://reckfularchive.github.io/files/assets/images/icons/folder.png">' + oldText.substring(0, oldText.length - 1));
+                    $(this).html('<img class="icons" src="https://reckfularchive.github.io/files/assets/images/icons/folder.png">' + oldText.substring(0, oldText.length - 1));
 
                     // Fix for annoying jQuery behaviour where inserted spaces are treated as new elements -- which breaks my search.
                     var string = ' ' + $($(this)[0].nextSibling).text();
@@ -148,7 +148,7 @@
                 // File format not supported by Better Listings, so let's load a generic icon.
                 if (found == 0) {
                     var oldText = $(this).text();
-                    $(this).html('<img class="icons" src=https://reckfularchive.github.io/files/assets/images/icons/file.png">' + oldText);
+                    $(this).html('<img class="icons" src="https://reckfularchive.github.io/files/assets/images/icons/file.png">' + oldText);
                     return;
                 }
             });
