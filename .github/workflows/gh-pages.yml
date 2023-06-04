@@ -1,0 +1,25 @@
+name: GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+  release:
+    types: [ published ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: build
+        run: ./build.sh page.html assets "https://reckfularchive.github.io/files"
+        shell: bash
+      - name: deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
