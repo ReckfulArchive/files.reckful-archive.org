@@ -110,7 +110,7 @@ jQuery(function () {
                     .attr("data-toggle", "tooltip")
                     .attr("id", "top")
                     .attr("title", tooltipText)
-                    .html('<img class="icons" src="https://reckfularchive.github.io/files/assets/images/icons/' + formats[i] + '.png"></a>' + oldText);
+                    .html('<img class="icons" src="https://reckfularchive.github.io/files.reckful-archive.org/assets/images/icons/' + formats[i] + '.png"></a>' + oldText);
                 return;
             }
         }
@@ -118,7 +118,7 @@ jQuery(function () {
         // Add an icon for the go-back link.
         if ($thisText.indexOf("Parent Directory") >= 0) {
             found = 1;
-            $this.html('<img class="icons" src="https://reckfularchive.github.io/files/assets/images/icons/home.png">' + $thisText);
+            $this.html('<img class="icons" src="https://reckfularchive.github.io/files.reckful-archive.org/assets/images/icons/home.png">' + $thisText);
             return;
         }
 
@@ -126,7 +126,7 @@ jQuery(function () {
         // Check for folders as they don't have extensions.
         if ($href.substring($href.length - 1) === '/') {
             found = 1;
-            $this.html('<img class="icons" src="https://reckfularchive.github.io/files/assets/images/icons/folder.png">' + $thisText.substring(0, $thisText.length - 1));
+            $this.html('<img class="icons" src="https://reckfularchive.github.io/files.reckful-archive.org/assets/images/icons/folder.png">' + $thisText.substring(0, $thisText.length - 1));
 
             // Fix for annoying jQuery behaviour where inserted spaces are treated as new elements -- which breaks my search.
             let $nextSibling = $($this[0].nextSibling);
@@ -145,7 +145,7 @@ jQuery(function () {
                 .attr("data-toggle", "tooltip")
                 .attr("id", "top")
                 .attr("title", tooltipText)
-                .html('<img class="icons" src="https://reckfularchive.github.io/files/assets/images/icons/file.png">' + $thisText);
+                .html('<img class="icons" src="https://reckfularchive.github.io/files.reckful-archive.org/assets/images/icons/file.png">' + $thisText);
         }
     });
 
